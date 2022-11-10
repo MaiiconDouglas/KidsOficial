@@ -36,8 +36,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    //========================================================================================
-    //                                  UTILIZADOR
+    //==================               UTILIZADOR  ==================   //
 
     //INSERT
     public long Utilizador_Insert(String username, String pass) {
@@ -107,5 +106,5 @@ public class DBHelper extends SQLiteOpenHelper {
         return null;
     }
 
-    //========================================================================================
+    //============= ========== ========== ========== ========== ========== ========== ========== //
 }
