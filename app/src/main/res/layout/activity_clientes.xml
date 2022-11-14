@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cadastro de Clientes!"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/cd_cadastro_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="Descrição" />
+
+        <EditText
+            android:id="@+id/cd_cod_sku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="Ex: 00000001" />
+
+        <EditText
+            android:id="@+id/cd_preco_venda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="Ex: 199,50" />
+
+        <EditText
+            android:id="@+id/cd_cadastro_estoque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="Estoque" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dados Fiscais"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/cd_cod_origem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="Descrever a origem!" />
+
+        <EditText
+            android:id="@+id/cd_cod_cep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="NCM" />
+
+        <EditText
+            android:id="@+id/cd_cod_cidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="CEST" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/bt_registo_registar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cadastrar" />
+
+
+    <Button
+        android:id="@+id/bt_cadastrar_cancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cancelar" />
+
+
+
+
+</LinearLayout>
