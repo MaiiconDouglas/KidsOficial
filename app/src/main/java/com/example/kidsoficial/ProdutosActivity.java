@@ -9,9 +9,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ClientesActivity extends AppCompatActivity {
+public class ProdutosActivity extends AppCompatActivity {
 
-    private ClientesActivity.ViewHolder mViewHolder = new ClientesActivity.ViewHolder();
+    private ProdutosActivity.ViewHolder mViewHolder = new ProdutosActivity.ViewHolder();
 
     private DBHelper db;
 
@@ -54,24 +54,24 @@ public class ClientesActivity extends AppCompatActivity {
                 String cd_cod_cidade = mViewHolder.cd_cod_cidade.getText().toString().trim();
 
                 if (cd_cadastro_descricao.isEmpty())
-                    Toast.makeText( ClientesActivity.this, "Insira o nome do Produto!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText( ProdutosActivity.this, "Insira o nome do Produto!", Toast.LENGTH_SHORT).show();
                 else if (cd_cod_sku.isEmpty() || cd_preco_venda.isEmpty())
-                    Toast.makeText( ClientesActivity.this, "Insira e repita o password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText( ProdutosActivity.this, "Insira e repita o password", Toast.LENGTH_SHORT).show();
 
                 /// pensar na logica novamente.
 
                 else if (!password1.equals(password2))
-                    Toast.makeText( ClientesActivity.this, "Passwords não coincidem!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText( ProdutosActivity.this, "Passwords não coincidem!", Toast.LENGTH_SHORT).show();
                 else {
                     long res = db.Utilizador_Insert(username, password1);
                     if (res > 0) {
-                        Toast.makeText( ClientesActivity.this, "Usuário registado com sucesso!!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText( ProdutosActivity.this, "Usuário registado com sucesso!!", Toast.LENGTH_SHORT).show();
                         Intent i = getIntent();
                         i.putExtra("username", username);
                         setResult(1, i);
                         finish();
                     } else {
-                        Toast.makeText( ClientesActivity.this, "Erro ao registar o Usuário!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText( ProdutosActivity.this, "Erro ao registar o Usuário!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
