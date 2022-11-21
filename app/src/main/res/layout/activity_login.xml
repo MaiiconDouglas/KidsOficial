@@ -16,7 +16,7 @@
         android:padding="30dp">
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/imageView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/logo" />
@@ -54,10 +54,9 @@
 
         <Button
             android:id="@+id/bt_login_entrar"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Entrar" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -70,7 +69,7 @@
 
         <Button
             android:id="@+id/bt_login_registar"
-            android:layout_width="345dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Registar" />
     </LinearLayout>
