@@ -82,21 +82,9 @@ public class ClientesActivity extends AppCompatActivity {
 
       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-                else if (!password1.equals(password2))
-                    Toast.makeText( ClientesActivity.this, "Passwords não coincidem!", Toast.LENGTH_SHORT).show();
-                else {
-                    long res = db.Utilizador_Insert(username, password1);
-                    if (res > 0) {
-                        Toast.makeText( ClientesActivity.this, "Usuário registado com sucesso!!", Toast.LENGTH_SHORT).show();
-                        Intent i = getIntent();
-                        i.putExtra("username", username);
-                        setResult(1, i);
-                        finish();
-                    } else {
-                        Toast.makeText( ClientesActivity.this, "Erro ao registar o Usuário!", Toast.LENGTH_SHORT).show();
-                    }
+
                 }
-            }
+
         });
 
     }

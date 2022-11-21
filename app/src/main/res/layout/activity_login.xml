@@ -54,15 +54,10 @@
 
         <Button
             android:id="@+id/bt_login_entrar"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:text="Entrar" />
 
-        <Button
-            android:id="@+id/bt_login_registar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Registar" />
     </LinearLayout>
 
     <LinearLayout
@@ -73,6 +68,11 @@
         android:orientation="vertical"
         android:padding="30dp">
 
+        <Button
+            android:id="@+id/bt_login_registar"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:text="Registar" />
     </LinearLayout>
 
 
