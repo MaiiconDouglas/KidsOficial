@@ -1,11 +1,11 @@
 package com.example.kidsoficial;
 
-public class Produtos {
+public class Cliente {
 
     int id;
     String descricao, codigo, preco_venda, estoque, origem, ncm, cest;
 
-    public Produtos() {
+    public Cliente() {
         id = 0;
         descricao = "";
         codigo = "";
@@ -16,7 +16,7 @@ public class Produtos {
         cest = "";
     }
 
-    public Produtos(int id) {
+    public Cliente(int id) {
         this.id = id;
         descricao = "";
         codigo = "";
@@ -27,7 +27,7 @@ public class Produtos {
         cest = "";
     }
 
-    public Produtos(String descricao, String codigo, String preco_venda, String estoque, String origem, String ncm, String cest ) {
+    public Cliente(String descricao, String codigo, String preco_venda, String estoque, String origem, String ncm, String cest ) {
         id = 0;
         this.descricao = descricao;
         this.codigo = codigo;
@@ -38,7 +38,7 @@ public class Produtos {
         this.cest = cest;
     }
 
-    public Produtos(int id, String descricao, String codigo, String preco_venda, String estoque, String origem, String ncm, String cest ) {
+    public Cliente(int id, String descricao, String codigo, String preco_venda, String estoque, String origem, String ncm, String cest ) {
         this.id = id;
         this.descricao = descricao;
         this.codigo = codigo;
@@ -49,7 +49,7 @@ public class Produtos {
         this.cest = cest;
     }
 
-    public Produtos(Produtos u) {
+    public Cliente(Cliente u) {
         id = u.id;
         this.descricao = descricao;
         this.codigo = codigo;
@@ -87,7 +87,7 @@ public class Produtos {
 
     @Override
     public String toString() {
-        return "Produto{" +
+        return "Cliente{" +
                 "id=" + id +
                 ", descricao='" + descricao + '\'' +
                 ", codigo='" + codigo + '\'' +

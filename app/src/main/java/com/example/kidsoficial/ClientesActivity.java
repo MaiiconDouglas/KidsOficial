@@ -9,15 +9,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ProdutosActivity extends AppCompatActivity {
+public class ClientesActivity extends AppCompatActivity {
 
-    private ProdutosActivity.ViewHolder mViewHolder = new ProdutosActivity.ViewHolder();
+    private ViewHolder mViewHolder = new ViewHolder();
 
     private DBHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_clientes);
 
         mViewHolder.cd_cadastro_descricao = findViewById(R.id.cd_cadastro_descricao);
@@ -34,8 +35,10 @@ public class ProdutosActivity extends AppCompatActivity {
 
         mViewHolder.cd_cod_cidade = findViewById(R.id.cd_cod_cidade);
 
-        db = new DBHelper(this);  // Puxando dados banco produtos! porém ainda não registrando no mesmo.
+         // Puxando dados banco Clientes!
 
+         db = new DBHelper(this);
+         
         mViewHolder.bt_registo_registar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,25 +56,44 @@ public class ProdutosActivity extends AppCompatActivity {
 
                 String cd_cod_cidade = mViewHolder.cd_cod_cidade.getText().toString().trim();
 
-                if (cd_cadastro_descricao.isEmpty())
-                    Toast.makeText( ProdutosActivity.this, "Insira o nome do Produto!", Toast.LENGTH_SHORT).show();
-                else if (cd_cod_sku.isEmpty() || cd_preco_venda.isEmpty())
-                    Toast.makeText( ProdutosActivity.this, "Insira e repita o password", Toast.LENGTH_SHORT).show();
+                ///////////////
 
-                /// pensar na logica novamente.
+                if (cd_cadastro_descricao.isEmpty())
+                    Toast.makeText( ClientesActivity.this, "Insira o nome do Produto!", Toast.LENGTH_SHORT).show();
+
+                else if (cd_cod_sku.isEmpty())
+                    Toast.makeText( ClientesActivity.this, "Insira o código SKU", Toast.LENGTH_SHORT).show();
+
+                else if (cd_preco_venda.isEmpty())
+                    Toast.makeText( ClientesActivity.this, "Insira o Valor da Venda!", Toast.LENGTH_SHORT).show();
+
+                else if (cd_cadastro_estoque.isEmpty())
+                    Toast.makeText( ClientesActivity.this, "Insira a quantidade de produto no estoque!", Toast.LENGTH_SHORT).show();
+
+                else if (cd_cod_origem.isEmpty())
+                    Toast.makeText( ClientesActivity.this, "Descrever a Origem!", Toast.LENGTH_SHORT).show();
+
+                else if (cd_cod_cep.isEmpty())
+                    Toast.makeText( ClientesActivity.this, "Insira o código da cidade!", Toast.LENGTH_SHORT).show();
+
+                else if (cd_cod_cidade.isEmpty())
+                    Toast.makeText( ClientesActivity.this, "Insira o código do cliente", Toast.LENGTH_SHORT).show();
+
+
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                 else if (!password1.equals(password2))
-                    Toast.makeText( ProdutosActivity.this, "Passwords não coincidem!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText( ClientesActivity.this, "Passwords não coincidem!", Toast.LENGTH_SHORT).show();
                 else {
                     long res = db.Utilizador_Insert(username, password1);
                     if (res > 0) {
-                        Toast.makeText( ProdutosActivity.this, "Usuário registado com sucesso!!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText( ClientesActivity.this, "Usuário registado com sucesso!!", Toast.LENGTH_SHORT).show();
                         Intent i = getIntent();
                         i.putExtra("username", username);
                         setResult(1, i);
                         finish();
                     } else {
-                        Toast.makeText( ProdutosActivity.this, "Erro ao registar o Usuário!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText( ClientesActivity.this, "Erro ao registar o Usuário!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -81,7 +103,9 @@ public class ProdutosActivity extends AppCompatActivity {
 
     private class ViewHolder {
         EditText cd_cadastro_descricao, cd_cod_sku, cd_preco_venda, cd_cadastro_estoque, cd_cod_origem, cd_cod_cep, cd_cod_cidade;
+
         Button bt_registo_registar;
+
         Button bt_cadastrar_cancelar;
     }
 }
