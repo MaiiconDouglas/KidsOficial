@@ -36,7 +36,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    //==================               UTILIZADOR  ==================   //
+    //==================  UTILIZADOR  ==================   //
 
     //INSERT
     public long Utilizador_Insert(String username, String pass) {
@@ -106,5 +106,19 @@ public class DBHelper extends SQLiteOpenHelper {
         return null;
     }
 
-    //============= ========== ========== ========== ========== ========== ========== ========== //
+
+    //////////////////////////////
+
+    //SELECT Clientes
+    public int Produtos(String username, String pass) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM utilizador WHERE username = ? AND pass = ?",
+                new String[]{username, pass});
+        c.moveToFirst();
+        if (c.getCount() == 1)
+            return c.getInt(c.getColumnIndex("id"));
+        return -1;
+    }
+
+
 }

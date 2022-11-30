@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private class ViewHolder {
+    static class ViewHolder {
         EditText et_username, et_password;
         Button bt_entrar, bt_registar;
     }
