@@ -84,36 +84,72 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="189dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="166dp"
-            android:layout_marginBottom="39dp"
-            android:backgroundTint="#ff8f00"
-            android:src="@drawable/plus"
-            android:tint="#ffffff"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:maxImageSize="30dp" />
-
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="409dp"
             android:layout_height="403dp"
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
-            android:layout_marginBottom="1dp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"></LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/bt_abrir_cliente"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cadastrar Cliente"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.103"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.149" />
+
+                <Button
+                    android:id="@+id/bt_abrir_lista_cliente"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:text="Clientes"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.103"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.353" />
+
+                <Button
+                    android:id="@+id/bt_abrir_avaliacao"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:text="Avaliação"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.777"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.354" />
+
+                <Button
+                    android:id="@+id/bt_abrir_Produtos"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cadastrar Produtos"
+                    app:icon="@drawable/background_button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.777"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.149" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
