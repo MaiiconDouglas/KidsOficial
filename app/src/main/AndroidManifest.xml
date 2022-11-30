@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KidsOficial"
         tools:targetApi="31">
+        <activity android:name=".ClientesActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".RegistoActivity" />
         <activity android:name=".LoginActivity" />
