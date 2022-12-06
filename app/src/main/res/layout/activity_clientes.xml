@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        app:srcCompat="@drawable/logo" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,12 +20,6 @@
         android:orientation="vertical"
         android:padding="30dp">
 
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:layout_width="match_parent"
@@ -56,14 +56,6 @@
             android:gravity="center_vertical"
             android:hint="Estoque" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Dados Fiscais"
-            android:textSize="30sp" />
-
         <EditText
             android:id="@+id/cd_cod_origem"
             android:layout_width="match_parent"
@@ -95,17 +87,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Cadastrar" />
-
-
-
-    <Button
-        android:id="@+id/bt_cadastrar_cancelar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Cancelar" />
-
-
 
 
 </LinearLayout>

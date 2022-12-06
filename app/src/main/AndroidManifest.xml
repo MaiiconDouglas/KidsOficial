@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KidsOficial"
         tools:targetApi="31">
+        <activity android:name=".Lista_ClienteActivity" />
+        <activity android:name=".AvaliacaoActivity" />
+        <activity android:name=".ProdutosActivity" />
         <activity android:name=".ClientesActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".RegistoActivity" />
